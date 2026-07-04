@@ -24,6 +24,31 @@ function initTypewriter() {
   setTimeout(() => typewrite(el, TYPEWRITER_TEXT, TYPE_SPEED_MS), TYPE_START_DELAY_MS);
 }
 
+function initScrollReveal() {
+  const groups = document.querySelectorAll('.reveal-group');
+  if (!groups.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    groups.forEach((group) => group.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  groups.forEach((group) => observer.observe(group));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTypewriter();
+  initScrollReveal();
 });
