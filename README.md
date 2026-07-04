@@ -18,6 +18,10 @@ Then open `http://localhost:8000`.
 4. At your domain registrar, add the DNS records GitHub Pages requires (an `A` record set pointing at GitHub's Pages IPs, or a `CNAME` record pointing at `<your-github-username>.github.io`, per [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)).
 5. Back in Settings → Pages, enter your custom domain and enable "Enforce HTTPS" once DNS has propagated.
 
+## Editing translations
+
+All English and French copy lives in the `TRANSLATIONS` object at the top of `script.js`. Each key (e.g. `heroTagline`, `aboutBio`) has an `en` and `fr` value; edit the strings there rather than in `index.html`. Tool/technology names (Splunk, Python, MITRE ATT&CK, etc.) and project repo names are intentionally left untranslated in the HTML directly and have no corresponding translation key.
+
 ## Before going live
 
 - Replace all placeholder content in `index.html`: name, bio, stats, GitHub project links/descriptions, email, LinkedIn/GitHub URLs.
