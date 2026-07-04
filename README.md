@@ -32,7 +32,7 @@ All English and French copy lives in the `TRANSLATIONS` object at the top of `sc
 
 ## Before going live
 
-- Update the three project GitHub links: they currently point to placeholder URLs (`https://github.com/pfdemai/blue-team-writeups`, `https://github.com/pfdemai/homelab-infrastructure`, `https://github.com/pfdemai/accountability-bot`) — replace the `href` on each `.project-card__link` in `index.html` once the real repos exist.
+- Update the three project GitHub links: they currently point to placeholder URLs (`https://github.com/pfdemai/blue-team-writeups`, `https://github.com/pfdemai/homelab-infrastructure`, `https://github.com/pfdemai/echoleak-ai-attack-analysis`) — replace the `href` on each `.project-card__link` in `index.html` once the real repos exist (the EchoLeak one is a shared group repo, so double-check the final URL isn't under your own account).
 - Replace the LinkedIn placeholder link (`https://linkedin.com/in/username` in the Contact section of `index.html`) with your real profile URL.
 - Add a real `resume.pdf` to the repo root (linked from the Contact section) or remove that link.
 - Once ISC2 CC / CompTIA Security+ are obtained, drop the "(in progress)" suffix on those two entries in the Certifications & Training skill card (`index.html` and both `en`/`fr` entries for `skillItemCert1`/`skillItemCert2` in `script.js`).
