@@ -22,3 +22,4 @@ Then open `http://localhost:8000`.
 
 - Replace all placeholder content in `index.html`: name, bio, stats, GitHub project links/descriptions, email, LinkedIn/GitHub URLs.
 - Add a real `resume.pdf` to the repo root (linked from the Contact section) or remove that link.
+- Replace the hero's placeholder photo circle (currently showing "AR" initials) with a real `<img>`: swap the `<span class="hero__photo-initials" aria-hidden="true">AR</span>` element for `<img src="photo.jpg" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">` inside `.hero__photo`, and update the `aria-label` on `.hero__photo` if needed.
