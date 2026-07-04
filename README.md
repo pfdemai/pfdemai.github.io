@@ -24,6 +24,8 @@ All English and French copy lives in the `TRANSLATIONS` object at the top of `sc
 
 ## Before going live
 
-- Replace all placeholder content in `index.html`: name, bio, stats, GitHub project links/descriptions, email, LinkedIn/GitHub URLs.
+- Update the three project GitHub links: they currently point to placeholder URLs (`https://github.com/pfdemai/blue-team-writeups`, `https://github.com/pfdemai/homelab-infrastructure`, `https://github.com/pfdemai/accountability-bot`) — replace the `href` on each `.project-card__link` in `index.html` once the real repos exist.
+- Replace the LinkedIn placeholder link (`https://linkedin.com/in/username` in the Contact section of `index.html`) with your real profile URL.
 - Add a real `resume.pdf` to the repo root (linked from the Contact section) or remove that link.
-- Replace the hero's placeholder photo circle (currently showing "AR" initials) with a real `<img>`: swap the `<span class="hero__photo-initials" aria-hidden="true">AR</span>` element for `<img src="photo.jpg" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">` inside `.hero__photo`, and update the `aria-label` on `.hero__photo` if needed.
+- Replace the placeholder domain in `CNAME` once you've purchased one (see "Deploying to GitHub Pages" above).
+- Once ISC2 CC / CompTIA Security+ are obtained, drop the "(in progress)" suffix on those two entries in the Certifications & Training skill card (`index.html` and both `en`/`fr` entries for `skillItemCert1`/`skillItemCert2` in `script.js`).

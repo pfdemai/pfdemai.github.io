@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Rivera — Defensive Security Analyst</title>
-  <meta name="description" content="Alex Rivera is a defensive security analyst specializing in detection engineering, threat hunting, and incident response.">
+  <title>Pierre-François Demai — Junior SOC Analyst</title>
+  <meta name="description" content="Pierre-François Demai is a junior SOC analyst focused on blue team defense, incident response, and digital forensics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
   <header class="topbar">
     <div class="topbar__inner">
-      <a class="topbar__logo" href="#top">AR<span class="dot">.</span></a>
+      <a class="topbar__logo" href="#top">PD<span class="dot">.</span></a>
       <nav class="topbar__nav" aria-label="Primary">
         <a href="#about" data-i18n="navAbout">About</a>
         <a href="#skills" data-i18n="navSkills">Skills</a>
@@ -37,8 +37,8 @@
       <div class="hero__inner">
         <div class="hero__text">
           <p class="hero__eyebrow reveal-item" data-i18n="heroEyebrow">DEFENSIVE SECURITY / BLUE TEAM</p>
-          <h1 class="hero__name reveal-item">Alex Rivera</h1>
-          <p class="hero__role reveal-item" data-i18n="heroRole">Blue Team Security Analyst — Detection &amp; Incident Response</p>
+          <h1 class="hero__name reveal-item">Pierre-François Demai</h1>
+          <p class="hero__role reveal-item" data-i18n="heroRole">Junior SOC Analyst — Blue Team &amp; Incident Response</p>
           <p class="hero__tagline reveal-item">
             <span id="typewriter"></span><span class="cursor" aria-hidden="true">▌</span>
           </p>
@@ -47,8 +47,8 @@
             <a class="btn btn--ghost" href="#contact" data-i18n="ctaContact">Contact Me</a>
           </div>
         </div>
-        <div class="hero__photo reveal-item" role="img" aria-label="Portrait of Alex Rivera">
-          <span class="hero__photo-initials" aria-hidden="true">AR</span>
+        <div class="hero__photo reveal-item" role="img" aria-label="Portrait of Pierre-François Demai">
+          <img src="photo_cv.png" alt="" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
         </div>
       </div>
     </section>
@@ -58,16 +58,18 @@
         <p class="section__eyebrow" data-i18n="aboutEyebrow">ABOUT</p>
         <h2 class="section__title" data-i18n="aboutTitle">About Me</h2>
         <p class="about__bio" data-i18n="aboutBio">
-          I'm a defensive security analyst focused on detection engineering, threat hunting, and
-          incident response. I spend my days writing Sigma rules, tuning SIEM alerts, and chasing
-          down the alerts that turn out to matter. Off the clock, I run a home SOC lab to test
-          attacker techniques against my own detections before they show up in the wild.
+          After nearly seven years in B2B commercial roles, I retrained in cybersecurity through an
+          intensive bootcamp (92% final exam score) and I'm now building a blue team portfolio
+          through hands-on investigation challenges — network forensics, incident response, threat
+          hunting, and malware analysis. I run a homelab (Proxmox, pfSense, Kali, Wazuh...) as a
+          space for serious, self-directed practice. Outside of security work, I'm a long-time Scout
+          leader with a strong pull toward service-oriented and uniformed roles.
         </p>
         <div class="stat-strip">
-          <div class="stat-chip"><span class="stat-chip__value">4+</span><span class="stat-chip__label" data-i18n="statYearsLabel">Years in Security</span></div>
-          <div class="stat-chip"><span class="stat-chip__value">12</span><span class="stat-chip__label" data-i18n="statDetectionsLabel">Detections Shipped</span></div>
-          <div class="stat-chip"><span class="stat-chip__value">3</span><span class="stat-chip__label" data-i18n="statCertsLabel">Certifications</span></div>
+          <div class="stat-chip"><span class="stat-chip__value">92%</span><span class="stat-chip__label" data-i18n="statScoreLabel">Bootcamp Final Exam Score</span></div>
+          <div class="stat-chip"><span class="stat-chip__value">30</span><span class="stat-chip__label" data-i18n="statChallengesLabel">TryHackMe Blue Team Challenges</span></div>
           <div class="stat-chip"><span class="stat-chip__value">1</span><span class="stat-chip__label" data-i18n="statLabLabel">Home SOC Lab</span></div>
+          <div class="stat-chip"><span class="stat-chip__value">7+</span><span class="stat-chip__label" data-i18n="statExperienceLabel">Years Professional Experience</span></div>
         </div>
       </div>
     </section>
@@ -80,40 +82,36 @@
           <div class="skill-card">
             <h3 class="skill-card__title" data-i18n="skillCategorySiem">SIEM &amp; Detection</h3>
             <ul class="skill-card__list">
-              <li>Splunk</li>
-              <li>Elastic Stack</li>
-              <li>Sigma Rules</li>
-              <li>Detection-as-Code</li>
-              <li>Microsoft Sentinel</li>
+              <li data-i18n="skillItemSiem1">Splunk (log analysis, search &amp; correlation)</li>
+              <li data-i18n="skillItemSiem2">SIEM deployment (homelab)</li>
+              <li data-i18n="skillItemSiem3">Sigma / detection logic basics</li>
             </ul>
           </div>
           <div class="skill-card">
-            <h3 class="skill-card__title" data-i18n="skillCategoryThreatHunting">Threat Hunting &amp; IR</h3>
+            <h3 class="skill-card__title" data-i18n="skillCategoryThreatHunting">Incident Response &amp; Forensics</h3>
             <ul class="skill-card__list">
-              <li>MITRE ATT&amp;CK</li>
-              <li>Memory Forensics</li>
-              <li>EDR Triage</li>
-              <li>Log Correlation</li>
-              <li>Timeline Analysis</li>
+              <li data-i18n="skillItemIr1">Windows event log &amp; PowerShell log analysis</li>
+              <li data-i18n="skillItemIr2">Network forensics (Wireshark, tshark)</li>
+              <li data-i18n="skillItemIr3">C2 beaconing &amp; DNS tunneling detection</li>
+              <li data-i18n="skillItemIr4">Malware triage (PE format, file signature analysis)</li>
             </ul>
           </div>
           <div class="skill-card">
-            <h3 class="skill-card__title" data-i18n="skillCategoryScripting">Scripting &amp; Automation</h3>
+            <h3 class="skill-card__title" data-i18n="skillCategoryScripting">Infrastructure &amp; Networking</h3>
             <ul class="skill-card__list">
-              <li>Python</li>
-              <li>PowerShell</li>
-              <li>Bash</li>
-              <li>KQL</li>
-              <li>SOAR Playbooks</li>
+              <li data-i18n="skillItemInfra1">Proxmox (virtualization)</li>
+              <li data-i18n="skillItemInfra2">pfSense (firewall/network segmentation)</li>
+              <li data-i18n="skillItemInfra3">Kali Linux</li>
+              <li data-i18n="skillItemInfra4">Tailscale (secure remote access)</li>
             </ul>
           </div>
           <div class="skill-card">
-            <h3 class="skill-card__title" data-i18n="skillCategoryCerts">Certifications</h3>
+            <h3 class="skill-card__title" data-i18n="skillCategoryCerts">Certifications &amp; Training</h3>
             <ul class="skill-card__list">
-              <li>CompTIA Security+</li>
-              <li>GCIH</li>
-              <li>Blue Team Level 1 (BTL1)</li>
-              <li>AWS Security Fundamentals</li>
+              <li data-i18n="skillItemCert1">ISC2 CC (in progress)</li>
+              <li data-i18n="skillItemCert2">CompTIA Security+ (in progress)</li>
+              <li data-i18n="skillItemCert3">Ironhack Cybersecurity Bootcamp (2026)</li>
+              <li data-i18n="skillItemCert4">TryHackMe — SOC Level 1 path completed</li>
             </ul>
           </div>
         </div>
@@ -126,56 +124,49 @@
         <h2 class="section__title" data-i18n="projectsTitle">Featured GitHub Projects</h2>
         <div class="projects__grid">
           <article class="project-card">
-            <h3 class="project-card__name">sigma-detection-pack</h3>
+            <h3 class="project-card__name">blue-team-writeups</h3>
             <p class="project-card__desc" data-i18n="project1Desc">
-              A curated set of Sigma rules for detecting common lateral-movement and persistence
-              techniques, mapped to MITRE ATT&amp;CK.
+              A documented collection of TryHackMe blue team investigation challenges — network
+              forensics, Windows endpoint analysis, incident response, phishing, threat hunting, and
+              malware analysis.
             </p>
             <div class="project-card__tags">
-              <span class="tag">Sigma</span>
-              <span class="tag">YAML</span>
-              <span class="tag">MITRE ATT&amp;CK</span>
+              <span class="tag">TryHackMe</span>
+              <span class="tag">Blue Team</span>
+              <span class="tag">Digital Forensics</span>
+              <span class="tag">Incident Response</span>
+              <span class="tag">Markdown</span>
             </div>
-            <a class="project-card__link" href="https://github.com/username/sigma-detection-pack" data-i18n="projectLinkText">View on GitHub &rarr;</a>
+            <a class="project-card__link" href="https://github.com/pfdemai/blue-team-writeups" data-i18n="projectLinkText">View on GitHub &rarr;</a>
           </article>
           <article class="project-card">
-            <h3 class="project-card__name">logparse-toolkit</h3>
+            <h3 class="project-card__name">homelab-infrastructure</h3>
             <p class="project-card__desc" data-i18n="project2Desc">
-              Python toolkit for normalizing and correlating logs from mismatched EDR and firewall
-              exports during incident response.
+              A self-hosted homelab built for hands-on security practice — virtualization, network
+              segmentation, and a SIEM pipeline.
             </p>
             <div class="project-card__tags">
-              <span class="tag">Python</span>
-              <span class="tag">Log Analysis</span>
-              <span class="tag">IR</span>
+              <span class="tag">Proxmox</span>
+              <span class="tag">pfSense</span>
+              <span class="tag">Kali Linux</span>
+              <span class="tag">SIEM</span>
+              <span class="tag">Tailscale</span>
             </div>
-            <a class="project-card__link" href="https://github.com/username/logparse-toolkit" data-i18n="projectLinkText">View on GitHub &rarr;</a>
+            <a class="project-card__link" href="https://github.com/pfdemai/homelab-infrastructure" data-i18n="projectLinkText">View on GitHub &rarr;</a>
           </article>
           <article class="project-card">
-            <h3 class="project-card__name">home-soc-lab</h3>
+            <h3 class="project-card__name">accountability-bot</h3>
             <p class="project-card__desc" data-i18n="project3Desc">
-              Infrastructure-as-code for a home SOC lab: Elastic stack, Sysmon-instrumented Windows
-              hosts, and a simulated attacker range.
+              An automation-driven accountability bot combining a chat interface with an LLM backend
+              and a serverless database.
             </p>
             <div class="project-card__tags">
-              <span class="tag">Terraform</span>
-              <span class="tag">Elastic</span>
-              <span class="tag">Sysmon</span>
+              <span class="tag">n8n</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Netlify</span>
             </div>
-            <a class="project-card__link" href="https://github.com/username/home-soc-lab" data-i18n="projectLinkText">View on GitHub &rarr;</a>
-          </article>
-          <article class="project-card">
-            <h3 class="project-card__name">ir-playbooks</h3>
-            <p class="project-card__desc" data-i18n="project4Desc">
-              Incident response playbooks and SOAR automation scripts for common alert types, built
-              to cut triage time.
-            </p>
-            <div class="project-card__tags">
-              <span class="tag">PowerShell</span>
-              <span class="tag">SOAR</span>
-              <span class="tag">Automation</span>
-            </div>
-            <a class="project-card__link" href="https://github.com/username/ir-playbooks" data-i18n="projectLinkText">View on GitHub &rarr;</a>
+            <a class="project-card__link" href="https://github.com/pfdemai/accountability-bot" data-i18n="projectLinkText">View on GitHub &rarr;</a>
           </article>
         </div>
       </div>
@@ -185,11 +176,11 @@
       <div class="section__inner reveal-group">
         <p class="section__eyebrow" data-i18n="contactEyebrow">CONTACT</p>
         <h2 class="section__title" data-i18n="contactTitle">Let's Talk</h2>
-        <p class="contact__line" data-i18n="contactLine">Open to blue team, detection engineering, and incident response roles.</p>
+        <p class="contact__line" data-i18n="contactLine">Open to Junior SOC Analyst, blue team, and incident response roles.</p>
         <div class="contact__links">
-          <a class="btn btn--primary" href="mailto:alex.rivera@example.com" data-i18n="ctaEmail">Email Me</a>
+          <a class="btn btn--primary" href="mailto:pf.demai@icloud.com" data-i18n="ctaEmail">Email Me</a>
           <a class="btn btn--ghost" href="https://linkedin.com/in/username">LinkedIn</a>
-          <a class="btn btn--ghost" href="https://github.com/username">GitHub</a>
+          <a class="btn btn--ghost" href="https://github.com/pfdemai">GitHub</a>
           <a class="btn btn--ghost" href="resume.pdf" data-i18n="ctaResume">Resume</a>
         </div>
       </div>
@@ -197,8 +188,8 @@
   </main>
 
   <footer class="site-footer">
-    <p data-i18n="footerCopyright">&copy; 2026 Alex Rivera. Built with static HTML, CSS, and JS.</p>
-    <p class="site-footer__status" data-i18n="footerStatus">Status: Actively interviewing.</p>
+    <p data-i18n="footerCopyright">&copy; 2026 Pierre-François Demai. Built with static HTML, CSS, and JS.</p>
+    <p class="site-footer__status" data-i18n="footerStatus">Status: Open to Junior SOC Analyst opportunities.</p>
   </footer>
 
   <script src="script.js"></script>
