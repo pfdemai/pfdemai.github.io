@@ -2,6 +2,10 @@
 
 A single-page static site for a defensive-security (blue team) job search: hero, about, skills, featured GitHub projects, and contact sections.
 
+## About this repo
+
+The code, copy, and translations in this repository were built with [Claude](https://claude.com/claude-code) (Anthropic) as an AI pair-programmer, working from my direction and content. Design decisions, content, and final review are mine.
+
 ## Local preview
 
 ```bash
