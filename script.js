@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 const TYPEWRITER_TEXT = "I build detections that catch what signatures miss.";
 const TYPE_SPEED_MS = 45;
 const TYPE_START_DELAY_MS = 1500;

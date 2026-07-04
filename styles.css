@@ -25,6 +25,17 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-cyan);
+  outline-offset: 2px;
+}
+
 body {
   margin: 0;
   background: var(--color-bg);
@@ -146,6 +157,9 @@ h1, h2, h3 {
 }
 
 .topbar__nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--color-text-secondary);
   transition: color 0.15s ease;
 }
@@ -422,6 +436,9 @@ h1, h2, h3 {
 }
 
 .project-card__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--color-accent-cyan);
@@ -467,7 +484,7 @@ h1, h2, h3 {
 }
 
 /* ---------- Scroll reveal (JS-driven) ---------- */
-.reveal-group {
+.js .reveal-group {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
