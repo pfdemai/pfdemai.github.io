@@ -376,3 +376,65 @@ h1, h2, h3 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ---------- Projects ---------- */
+.projects__grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+.project-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-card__name {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+}
+
+.project-card__desc {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent-amber);
+  background: var(--color-accent-amber-dim);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+}
+
+.project-card__link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent-cyan);
+  margin-top: auto;
+  transition: opacity 0.15s ease;
+}
+
+.project-card__link:hover, .project-card__link:focus-visible {
+  opacity: 0.75;
+}
+
+@media (min-width: 720px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
