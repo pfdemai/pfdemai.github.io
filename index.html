@@ -15,14 +15,18 @@
     <div class="topbar__inner">
       <a class="topbar__logo" href="#top">AR<span class="dot">.</span></a>
       <nav class="topbar__nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#skills" data-i18n="navSkills">Skills</a>
+        <a href="#projects" data-i18n="navProjects">Projects</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
       </nav>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" class="lang-toggle__btn" id="lang-en" aria-label="English" aria-pressed="true">EN</button>
+        <button type="button" class="lang-toggle__btn" id="lang-fr" aria-label="Français" aria-pressed="false">FR</button>
+      </div>
       <span class="status-badge">
         <span class="status-badge__dot" aria-hidden="true"></span>
-        STATUS: OPEN TO WORK
+        <span data-i18n="statusBadge">STATUS: OPEN TO WORK</span>
       </span>
     </div>
   </header>
@@ -32,15 +36,15 @@
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__inner">
         <div class="hero__text">
-          <p class="hero__eyebrow reveal-item">DEFENSIVE SECURITY / BLUE TEAM</p>
+          <p class="hero__eyebrow reveal-item" data-i18n="heroEyebrow">DEFENSIVE SECURITY / BLUE TEAM</p>
           <h1 class="hero__name reveal-item">Alex Rivera</h1>
-          <p class="hero__role reveal-item">Blue Team Engineer — Detection &amp; Incident Response</p>
+          <p class="hero__role reveal-item" data-i18n="heroRole">Blue Team Engineer — Detection &amp; Incident Response</p>
           <p class="hero__tagline reveal-item">
             <span id="typewriter"></span><span class="cursor" aria-hidden="true">▌</span>
           </p>
           <div class="hero__ctas reveal-item">
-            <a class="btn btn--primary" href="#projects">View Projects</a>
-            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+            <a class="btn btn--primary" href="#projects" data-i18n="ctaProjects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="ctaContact">Contact Me</a>
           </div>
         </div>
         <div class="hero__photo reveal-item" role="img" aria-label="Portrait of Alex Rivera">
@@ -51,30 +55,30 @@
 
     <section class="about" id="about">
       <div class="section__inner reveal-group">
-        <p class="section__eyebrow">ABOUT</p>
-        <h2 class="section__title">About Me</h2>
-        <p class="about__bio">
+        <p class="section__eyebrow" data-i18n="aboutEyebrow">ABOUT</p>
+        <h2 class="section__title" data-i18n="aboutTitle">About Me</h2>
+        <p class="about__bio" data-i18n="aboutBio">
           I'm a defensive security engineer focused on detection engineering, threat hunting, and
           incident response. I spend my days writing Sigma rules, tuning SIEM alerts, and chasing
           down the alerts that turn out to matter. Off the clock, I run a home SOC lab to test
           attacker techniques against my own detections before they show up in the wild.
         </p>
         <div class="stat-strip">
-          <div class="stat-chip"><span class="stat-chip__value">4+</span><span class="stat-chip__label">Years in Security</span></div>
-          <div class="stat-chip"><span class="stat-chip__value">12</span><span class="stat-chip__label">Detections Shipped</span></div>
-          <div class="stat-chip"><span class="stat-chip__value">3</span><span class="stat-chip__label">Certifications</span></div>
-          <div class="stat-chip"><span class="stat-chip__value">1</span><span class="stat-chip__label">Home SOC Lab</span></div>
+          <div class="stat-chip"><span class="stat-chip__value">4+</span><span class="stat-chip__label" data-i18n="statYearsLabel">Years in Security</span></div>
+          <div class="stat-chip"><span class="stat-chip__value">12</span><span class="stat-chip__label" data-i18n="statDetectionsLabel">Detections Shipped</span></div>
+          <div class="stat-chip"><span class="stat-chip__value">3</span><span class="stat-chip__label" data-i18n="statCertsLabel">Certifications</span></div>
+          <div class="stat-chip"><span class="stat-chip__value">1</span><span class="stat-chip__label" data-i18n="statLabLabel">Home SOC Lab</span></div>
         </div>
       </div>
     </section>
 
     <section class="skills" id="skills">
       <div class="section__inner reveal-group">
-        <p class="section__eyebrow">SKILLS</p>
-        <h2 class="section__title">Tools &amp; Tradecraft</h2>
+        <p class="section__eyebrow" data-i18n="skillsEyebrow">SKILLS</p>
+        <h2 class="section__title" data-i18n="skillsTitle">Tools &amp; Tradecraft</h2>
         <div class="skills__grid">
           <div class="skill-card">
-            <h3 class="skill-card__title">SIEM &amp; Detection</h3>
+            <h3 class="skill-card__title" data-i18n="skillCategorySiem">SIEM &amp; Detection</h3>
             <ul class="skill-card__list">
               <li>Splunk</li>
               <li>Elastic Stack</li>
@@ -84,7 +88,7 @@
             </ul>
           </div>
           <div class="skill-card">
-            <h3 class="skill-card__title">Threat Hunting &amp; IR</h3>
+            <h3 class="skill-card__title" data-i18n="skillCategoryThreatHunting">Threat Hunting &amp; IR</h3>
             <ul class="skill-card__list">
               <li>MITRE ATT&amp;CK</li>
               <li>Memory Forensics</li>
@@ -94,7 +98,7 @@
             </ul>
           </div>
           <div class="skill-card">
-            <h3 class="skill-card__title">Scripting &amp; Automation</h3>
+            <h3 class="skill-card__title" data-i18n="skillCategoryScripting">Scripting &amp; Automation</h3>
             <ul class="skill-card__list">
               <li>Python</li>
               <li>PowerShell</li>
@@ -104,7 +108,7 @@
             </ul>
           </div>
           <div class="skill-card">
-            <h3 class="skill-card__title">Certifications</h3>
+            <h3 class="skill-card__title" data-i18n="skillCategoryCerts">Certifications</h3>
             <ul class="skill-card__list">
               <li>CompTIA Security+</li>
               <li>GCIH</li>
@@ -118,12 +122,12 @@
 
     <section class="projects" id="projects">
       <div class="section__inner reveal-group">
-        <p class="section__eyebrow">PROJECTS</p>
-        <h2 class="section__title">Featured GitHub Projects</h2>
+        <p class="section__eyebrow" data-i18n="projectsEyebrow">PROJECTS</p>
+        <h2 class="section__title" data-i18n="projectsTitle">Featured GitHub Projects</h2>
         <div class="projects__grid">
           <article class="project-card">
             <h3 class="project-card__name">sigma-detection-pack</h3>
-            <p class="project-card__desc">
+            <p class="project-card__desc" data-i18n="project1Desc">
               A curated set of Sigma rules for detecting common lateral-movement and persistence
               techniques, mapped to MITRE ATT&amp;CK.
             </p>
@@ -132,11 +136,11 @@
               <span class="tag">YAML</span>
               <span class="tag">MITRE ATT&amp;CK</span>
             </div>
-            <a class="project-card__link" href="https://github.com/username/sigma-detection-pack">View on GitHub &rarr;</a>
+            <a class="project-card__link" href="https://github.com/username/sigma-detection-pack" data-i18n="projectLinkText">View on GitHub &rarr;</a>
           </article>
           <article class="project-card">
             <h3 class="project-card__name">logparse-toolkit</h3>
-            <p class="project-card__desc">
+            <p class="project-card__desc" data-i18n="project2Desc">
               Python toolkit for normalizing and correlating logs from mismatched EDR and firewall
               exports during incident response.
             </p>
@@ -145,11 +149,11 @@
               <span class="tag">Log Analysis</span>
               <span class="tag">IR</span>
             </div>
-            <a class="project-card__link" href="https://github.com/username/logparse-toolkit">View on GitHub &rarr;</a>
+            <a class="project-card__link" href="https://github.com/username/logparse-toolkit" data-i18n="projectLinkText">View on GitHub &rarr;</a>
           </article>
           <article class="project-card">
             <h3 class="project-card__name">home-soc-lab</h3>
-            <p class="project-card__desc">
+            <p class="project-card__desc" data-i18n="project3Desc">
               Infrastructure-as-code for a home SOC lab: Elastic stack, Sysmon-instrumented Windows
               hosts, and a simulated attacker range.
             </p>
@@ -158,11 +162,11 @@
               <span class="tag">Elastic</span>
               <span class="tag">Sysmon</span>
             </div>
-            <a class="project-card__link" href="https://github.com/username/home-soc-lab">View on GitHub &rarr;</a>
+            <a class="project-card__link" href="https://github.com/username/home-soc-lab" data-i18n="projectLinkText">View on GitHub &rarr;</a>
           </article>
           <article class="project-card">
             <h3 class="project-card__name">ir-playbooks</h3>
-            <p class="project-card__desc">
+            <p class="project-card__desc" data-i18n="project4Desc">
               Incident response playbooks and SOAR automation scripts for common alert types, built
               to cut triage time.
             </p>
@@ -171,7 +175,7 @@
               <span class="tag">SOAR</span>
               <span class="tag">Automation</span>
             </div>
-            <a class="project-card__link" href="https://github.com/username/ir-playbooks">View on GitHub &rarr;</a>
+            <a class="project-card__link" href="https://github.com/username/ir-playbooks" data-i18n="projectLinkText">View on GitHub &rarr;</a>
           </article>
         </div>
       </div>
@@ -179,22 +183,22 @@
 
     <section class="contact" id="contact">
       <div class="section__inner reveal-group">
-        <p class="section__eyebrow">CONTACT</p>
-        <h2 class="section__title">Let's Talk</h2>
-        <p class="contact__line">Open to blue team, detection engineering, and incident response roles.</p>
+        <p class="section__eyebrow" data-i18n="contactEyebrow">CONTACT</p>
+        <h2 class="section__title" data-i18n="contactTitle">Let's Talk</h2>
+        <p class="contact__line" data-i18n="contactLine">Open to blue team, detection engineering, and incident response roles.</p>
         <div class="contact__links">
-          <a class="btn btn--primary" href="mailto:alex.rivera@example.com">Email Me</a>
+          <a class="btn btn--primary" href="mailto:alex.rivera@example.com" data-i18n="ctaEmail">Email Me</a>
           <a class="btn btn--ghost" href="https://linkedin.com/in/username">LinkedIn</a>
           <a class="btn btn--ghost" href="https://github.com/username">GitHub</a>
-          <a class="btn btn--ghost" href="resume.pdf">Resume</a>
+          <a class="btn btn--ghost" href="resume.pdf" data-i18n="ctaResume">Resume</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2026 Alex Rivera. Built with static HTML, CSS, and JS.</p>
-    <p class="site-footer__status">Status: Actively interviewing.</p>
+    <p data-i18n="footerCopyright">&copy; 2026 Alex Rivera. Built with static HTML, CSS, and JS.</p>
+    <p class="site-footer__status" data-i18n="footerStatus">Status: Actively interviewing.</p>
   </footer>
 
   <script src="script.js"></script>
