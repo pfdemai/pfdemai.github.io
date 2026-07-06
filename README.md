@@ -2,37 +2,22 @@
 
 A single-page static site for a defensive-security (blue team) job search: hero, about, skills, featured GitHub projects, and contact sections.
 
+Live at [pfdemai.github.io](https://pfdemai.github.io), served via GitHub Pages directly from this repo's `main` branch.
+
 ## About this repo
 
-The code, copy, and translations in this repository were built with [Claude](https://claude.com/claude-code) (Anthropic) as an AI pair-programmer, working from my direction and content. Design decisions, content, and final review are mine.
+The code, copy, and translations in this repository were built with [Claude](https://claude.com/claude-code) (Anthropic) as an AI pair-programmer, working from the author's direction and content. Design decisions, content, and final review are the author's.
 
-## Local preview
+## Structure
 
-```bash
-python3 -m http.server 8000
-```
+- `index.html` — page markup and structure
+- `styles.css` — all styling
+- `script.js` — page behavior, plus the `TRANSLATIONS` object that holds all English/French copy (each key has an `en` and `fr` value; UI language toggles between them at runtime)
+- `photo_cv.png` — profile photo used in the hero/about sections
+- `docs/` — supporting documentation
 
-Then open `http://localhost:8000`.
+Tool/technology names (Splunk, Python, MITRE ATT&CK, etc.) and project repo names are intentionally left untranslated and hardcoded in `index.html` rather than routed through `TRANSLATIONS`.
 
-## Deploying to GitHub Pages
+## Deployment
 
-This repo is named `pfdemai.github.io`, GitHub's special naming convention for a user site — once Pages is enabled, it serves directly at `https://pfdemai.github.io` with no custom domain needed.
-
-1. Push this repository to GitHub as a public repo named exactly `pfdemai.github.io`.
-2. In the repo's Settings → Pages, set the source to the `main` branch, root directory.
-3. The site goes live at `https://pfdemai.github.io` within a few minutes.
-
-### Adding a custom domain later (optional)
-
-If you buy a domain down the line: add a `CNAME` file to the repo root containing just the domain (e.g. `alexrivera.dev`), add the DNS records GitHub Pages requires at your registrar (an `A` record set pointing at GitHub's Pages IPs, or a `CNAME` record pointing at `pfdemai.github.io`, per [GitHub's custom domain docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)), then enter the domain in Settings → Pages and enable "Enforce HTTPS" once DNS has propagated.
-
-## Editing translations
-
-All English and French copy lives in the `TRANSLATIONS` object at the top of `script.js`. Each key (e.g. `heroTagline`, `aboutBio`) has an `en` and `fr` value; edit the strings there rather than in `index.html`. Tool/technology names (Splunk, Python, MITRE ATT&CK, etc.) and project repo names are intentionally left untranslated in the HTML directly and have no corresponding translation key.
-
-## Before going live
-
-- Update the three project GitHub links: they currently point to placeholder URLs (`https://github.com/pfdemai/blue-team-writeups`, `https://github.com/pfdemai/homelab-infrastructure`, `https://github.com/pfdemai/echoleak-ai-attack-analysis`) — replace the `href` on each `.project-card__link` in `index.html` once the real repos exist (the EchoLeak one is a shared group repo, so double-check the final URL isn't under your own account).
-- Replace the LinkedIn placeholder link (`https://linkedin.com/in/username` in the Contact section of `index.html`) with your real profile URL.
-- Add a real `resume.pdf` to the repo root (linked from the Contact section) or remove that link.
-- Once ISC2 CC / CompTIA Security+ are obtained, drop the "(in progress)" suffix on those two entries in the Certifications & Training skill card (`index.html` and both `en`/`fr` entries for `skillItemCert1`/`skillItemCert2` in `script.js`).
+This repo is named `pfdemai.github.io` — GitHub's special naming convention for a user site. With GitHub Pages enabled (Settings → Pages, source: `main` branch, root directory), it serves directly at `https://pfdemai.github.io`, no custom domain required. Pushes to `main` deploy automatically within a few minutes.
