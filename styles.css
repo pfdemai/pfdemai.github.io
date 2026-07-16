@@ -13,6 +13,8 @@
   --color-accent-cyan-dim: rgba(34, 211, 238, 0.15);
   --color-accent-amber: #f5a524;
   --color-accent-amber-dim: rgba(245, 165, 36, 0.15);
+  --color-accent-green: #4ade80;
+  --color-accent-green-dim: rgba(74, 222, 128, 0.15);
   --color-border: rgba(148, 163, 184, 0.12);
   --font-display: 'Space Grotesk', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
@@ -175,9 +177,9 @@ h1, h2, h3 {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: var(--color-accent-cyan);
-  border: 1px solid var(--color-accent-cyan-dim);
-  background: var(--color-accent-cyan-dim);
+  color: var(--color-accent-green);
+  border: 1px solid var(--color-accent-green-dim);
+  background: var(--color-accent-green-dim);
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
 }
@@ -186,13 +188,13 @@ h1, h2, h3 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--color-accent-cyan);
+  background: var(--color-accent-green);
   animation: blink 2s ease-in-out infinite;
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.5); }
-  50% { opacity: 0.4; box-shadow: 0 0 0 4px rgba(34, 211, 238, 0); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5); }
+  50% { opacity: 0.4; box-shadow: 0 0 0 4px rgba(74, 222, 128, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -428,6 +430,10 @@ h1, h2, h3 {
 }
 
 .skill-card__list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--color-text-secondary);
@@ -437,6 +443,28 @@ h1, h2, h3 {
 
 .skill-card__list li:first-child {
   border-top: none;
+}
+
+.skill-level {
+  display: inline-flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.skill-level i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-border);
+  font-style: normal;
+}
+
+.skill-level[data-level="1"] i:nth-child(-n+1),
+.skill-level[data-level="2"] i:nth-child(-n+2),
+.skill-level[data-level="3"] i:nth-child(-n+3),
+.skill-level[data-level="4"] i:nth-child(-n+4),
+.skill-level[data-level="5"] i:nth-child(-n+5) {
+  background: var(--color-accent-cyan);
 }
 
 @media (min-width: 640px) {
@@ -453,7 +481,7 @@ h1, h2, h3 {
 
 @media (min-width: 1024px) {
   .skills__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
